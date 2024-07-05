@@ -13,3 +13,8 @@ export type PageProps<T extends Record<string, unknown> = Record<string, unknown
     };
     ziggy: Config & { location: string };
 };
+
+export type TBreadcrumb = {
+    imgPath: string,
+    title: string
+}

@@ -1,9 +1,10 @@
 import Layout from "@/Layouts/Layout"
-import { Head } from "@inertiajs/react"
+import { Head, Link } from "@inertiajs/react"
 import React from "react";
 import {
     CheckCircleIcon,
   } from "@heroicons/react/24/solid";
+import Breadcrumb from "@/Components/Breadcrumb";
 
 export default function Home() {
     const doingList = [
@@ -16,8 +17,10 @@ export default function Home() {
     return (
         <Layout>
             <Head title="Inicio" />
-            <div className="space-y-16">
-                <div className="grid max-w-5xl grid-cols-1 gap-8 px-6 mx-auto lg:grid-cols-2">
+            <Breadcrumb imgPath="/images/banner1.png" title="Nosotros" />
+            <div className="py-8 mx-auto space-y-16 max-w-7xl sm:px-6 lg:px-8">
+
+                <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
                     <div>
                         <p className="text-slate-500 font-extralight">Presentación Corporativa</p>
                         <h2 className="mt-1 mb-4 text-4xl font-black">¿Quiénes somos?</h2>
@@ -31,12 +34,17 @@ export default function Home() {
                                 que brinda servicios de asesoría y consultoría en temas relacionados a medio ambiente, seguridad y salud ocupacional a nivel nacional, con u equipo técnico consolidado que busca siempre la mejora continua en términos ambientales de sus clientes.
                             </span>
                         </p>
+                        <Link href={route('services.instrumentos-de-gestion-ambiental')} className="inline-block px-6 py-4 my-8 text-xl font-bold text-white transition-opacity bg-blue-800 rounded-full hover:opacity-90">
+                            Leer más
+                        </Link>
                     </div>
-                    <img className="object-cover h-full rounded-md" src="/images/banner1.png" alt="logo" />
+                    <div>
+                    <img className="object-cover h-full rounded-md" src="/images/ab1.png" alt="logo" />
+                    </div>
                 </div>
-                <hr className="my-16 border-2" />
-                <div className="grid max-w-5xl grid-cols-1 gap-8 px-6 mx-auto lg:grid-cols-2">
-                    <img className="order-2 object-cover h-full rounded-md lg:order-1" src="/images/banner1.png" alt="logo" />
+                <hr className="border-2" />
+                <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
+                    <img className="order-2 object-cover h-full rounded-md lg:order-1" src="/images/ab2.png" alt="logo" />
                     <div className="order-1 lg:order-2">
                         <h2 className="mt-1 mb-4 text-4xl font-black">¿Qué hacemos?</h2>
                         <p className="text-lg font-light text-justify text-zinc-500 lg:pr-8">

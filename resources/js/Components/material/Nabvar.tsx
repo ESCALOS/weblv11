@@ -28,31 +28,26 @@ import { Link } from "@inertiajs/react";
 const navListMenuItems = [
   {
     title: "Instrumentos de Gestión Ambiental",
-    description: "Find the perfect solution for your needs.",
     icon: SquaresPlusIcon,
     route: route('services.instrumentos-de-gestion-ambiental')
   },
   {
     title: "Servicios de Monitoreos Ambientales",
-    description: "Meet and learn about our dedication",
     icon: UserGroupIcon,
     route: route('services.instrumentos-de-gestion-ambiental')
   },
   {
     title: "Servicios de Monitoreos Ocupacionales",
-    description: "Find the perfect solution for your needs.",
     icon: Bars4Icon,
     route: route('services.instrumentos-de-gestion-ambiental')
   },
   {
     title: "Construcción de Sistemas de Tratamiento",
-    description: "Learn how we can help you achieve your goals.",
     icon: SunIcon,
     route: route('services.instrumentos-de-gestion-ambiental')
   },
   {
     title: "Elaboración de Expedientes Técnicos",
-    description: "Reach out to us for assistance or inquiries",
     icon: GlobeAmericasIcon,
     route: route('services.instrumentos-de-gestion-ambiental')
   }
@@ -62,7 +57,7 @@ function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const renderItems = navListMenuItems.map(
-    ({ icon, title, description, route }, key) => (
+    ({ icon, title, route }, key) => (
       <Link href={route} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
@@ -79,12 +74,6 @@ function NavListMenu() {
               className="flex items-center text-sm font-bold"
             >
               {title}
-            </Typography>
-            <Typography
-              variant="paragraph"
-              className="text-xs !font-medium text-blue-gray-500"
-            >
-              {description}
             </Typography>
           </div>
         </MenuItem>
@@ -104,7 +93,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+              className="flex items-center gap-2 py-2 pr-4 text-lg font-medium text-gray-900"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -147,7 +136,7 @@ function NavList() {
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
                 Inicio
             </ListItem>
         </Typography>
@@ -159,7 +148,7 @@ function NavList() {
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
                 Nosotros
             </ListItem>
         </Typography>
@@ -172,7 +161,7 @@ function NavList() {
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
                 Clientes
             </ListItem>
         </Typography>
@@ -184,7 +173,7 @@ function NavList() {
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
                 Contáctanos
             </ListItem>
         </Typography>
@@ -205,8 +194,8 @@ export default function NavbarWithMegaMenu() {
 
   return (
     <>
-    <Navbar className="max-w-screen-xl px-4 py-2 mx-auto my-4">
-      <div className="flex items-center justify-between text-blue-gray-900">
+    <nav className="px-4 mx-auto my-4">
+      <div className="flex items-center justify-between lg:justify-around text-blue-gray-900">
         <Link href={route('home')}>
         <Typography
           as="div"
@@ -235,7 +224,7 @@ export default function NavbarWithMegaMenu() {
       <Collapse open={openNav}>
         <NavList />
       </Collapse>
-    </Navbar>
+    </nav>
     </>
   );
 }
