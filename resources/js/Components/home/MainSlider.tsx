@@ -13,6 +13,7 @@ import '/resources/css/mainSlider.css';
 
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Link } from '@inertiajs/react';
+import TriangleRight from '../icons/triangleRight';
 
 export default function MainSlider() {
     const sliders = [
@@ -60,9 +61,7 @@ export default function MainSlider() {
                         <span className='block px-8 pb-16 text-4xl md:text-6xl'>{slider.title}</span>
                         <Link href={route('services.instrumentos-de-gestion-ambiental')} className='px-12 py-4 text-lg transition-colors bg-green-500 rounded-full hover:bg-green-600'>
                             Conoce más
-                            <svg className='inline mb-1 ml-2' width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <polygon points="20,10 80,50 20,90" fill="#fff"/>
-                            </svg>
+                            <TriangleRight color='white' size={20} />
                         </Link>
                     </p>
                 </SwiperSlide>)
