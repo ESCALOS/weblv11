@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -7,6 +8,7 @@ use Inertia\Inertia;
 Route::inertia('/', 'Home')->name('home');
 Route::inertia('/nosotros', 'About')->name('about');
 Route::inertia('/contactenos', 'Contact')->name('contact');
+Route::post('/contact', ContactController::class)->name('contact.mail');
 Route::inertia('/clientes', 'Client')->name('client');
 
 Route::prefix('servicios')->name('services.')->group(function () {

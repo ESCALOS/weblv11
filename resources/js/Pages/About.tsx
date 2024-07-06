@@ -1,6 +1,5 @@
 import Layout from "@/Layouts/Layout"
 import { Head, Link } from "@inertiajs/react"
-import React from "react";
 import {
     CheckCircleIcon,
   } from "@heroicons/react/24/solid";
@@ -62,7 +61,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
         </Layout>
     )
 }
