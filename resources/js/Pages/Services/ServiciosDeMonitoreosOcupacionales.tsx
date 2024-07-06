@@ -4,17 +4,34 @@ import ImageContent from "@/Components/ImageContent"
 import Layout from "@/Layouts/Layout"
 import { Head } from "@inertiajs/react"
 
-export default function InstrumentosDeGestionAmbiental() {
+export default function ServicioDeMonitoreosOcupacionales() {
     const tools = [
-        "Evaluación Ambiental Preliminar (EVAP)",
-        "Declaración de Impacto Ambiental (DIA)",
-        "Estudio de Impacto Ambiental Semidetallado (EIA-sd)",
-        "Estudio de Impacto Ambiental Detallado (EIA-d)",
-        "Declaración Ambiental de Actividades en Curso (DAAC)",
-        "Declaración de Adecuación Ambiental (DAA)",
-        "Informe Técnico Sustentatorio(ITS)",
-        "Modificaciones de Instrumentos de Gestión Ambiental",
-        "Informe de Gestión Ambiental(IGA)"
+        {
+            name: "Monitoreo de calidad de agua",
+            items: [
+                "Aerófilos mesófilos",
+                "Mohos y levaduras",
+                "Coliformes",
+                "Agua para consumo"
+            ]
+        },
+        {
+            name: "Exigencias psicológicas",
+            items: [
+                "Exigencias psicológicas",
+                "Doble presencia",
+                "Control sobre el trabajo",
+            ]
+        },
+        {
+            name: "Monitoreo de calidad de agua",
+            items: [
+                "Posturas forzadas",
+                "Levantamiento manual de carga",
+                "Movimientos repetitivos",
+                "Diversas metodologías de evaluación",
+            ]
+        }
     ]
 
     return (
@@ -34,7 +51,7 @@ export default function InstrumentosDeGestionAmbiental() {
                             tools.map((tool, index) => (
                                 <div key={index} className="px-4">
                                     <LeafIcon color="white" />
-                                    <p className="text-xl font-bold text-white">{tool}</p>
+                                    <p className="text-xl font-bold text-white">{tool.name}</p>
                                 </div>
                             ))
                         }

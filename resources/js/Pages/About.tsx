@@ -33,7 +33,7 @@ export default function Home() {
                                 que brinda servicios de asesoría y consultoría en temas relacionados a medio ambiente, seguridad y salud ocupacional a nivel nacional, con u equipo técnico consolidado que busca siempre la mejora continua en términos ambientales de sus clientes.
                             </span>
                         </p>
-                        <Link href={route('services.instrumentos-de-gestion-ambiental')} className="inline-block px-6 py-4 my-8 text-xl font-bold text-white transition-opacity bg-blue-800 rounded-full hover:opacity-90">
+                        <Link href={route('services.service1')} className="inline-block px-6 py-4 my-8 text-xl font-bold text-white transition-opacity bg-blue-800 rounded-full hover:opacity-90">
                             Leer más
                         </Link>
                     </div>

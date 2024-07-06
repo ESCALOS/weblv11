@@ -28,27 +28,27 @@ const navListMenuItems = [
   {
     title: "Instrumentos de Gestión Ambiental",
     icon: SquaresPlusIcon,
-    route: route('services.instrumentos-de-gestion-ambiental')
+    route: route('services.service1')
   },
   {
     title: "Servicios de Monitoreos Ambientales",
     icon: UserGroupIcon,
-    route: route('services.instrumentos-de-gestion-ambiental')
+    route: route('services.service2')
   },
   {
     title: "Servicios de Monitoreos Ocupacionales",
     icon: Bars4Icon,
-    route: route('services.instrumentos-de-gestion-ambiental')
+    route: route('services.service3')
   },
   {
     title: "Construcción de Sistemas de Tratamiento",
     icon: SunIcon,
-    route: route('services.instrumentos-de-gestion-ambiental')
+    route: route('services.service4')
   },
   {
     title: "Elaboración de Expedientes Técnicos",
     icon: GlobeAmericasIcon,
-    route: route('services.instrumentos-de-gestion-ambiental')
+    route: route('services.service5')
   }
 ];
 

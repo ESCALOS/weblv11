@@ -4,7 +4,7 @@ import ImageContent from "@/Components/ImageContent"
 import Layout from "@/Layouts/Layout"
 import { Head } from "@inertiajs/react"
 
-export default function InstrumentosDeGestionAmbiental() {
+export default function ConstruccionDeSistemasDeTratamiento() {
     const tools = [
         "Evaluación Ambiental Preliminar (EVAP)",
         "Declaración de Impacto Ambiental (DIA)",

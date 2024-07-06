@@ -4,7 +4,7 @@ import ImageContent from "@/Components/ImageContent"
 import Layout from "@/Layouts/Layout"
 import { Head } from "@inertiajs/react"
 
-export default function InstrumentosDeGestionAmbiental() {
+export default function ElaboracionDeExpedientesTecnicos() {
     const tools = [
         "Evaluación Ambiental Preliminar (EVAP)",
         "Declaración de Impacto Ambiental (DIA)",
@@ -19,16 +19,16 @@ export default function InstrumentosDeGestionAmbiental() {
 
     return (
         <Layout>
-            <Head title="Instrumentos de Gestion Ambiental" />
-            <Breadcrumb imgPath="/images/banner1.png" title="Instrumentos de Gestion Ambiental" />
+            <Head title="Elaboración de Expedientes Técnicos" />
+            <Breadcrumb imgPath="/images/banner1.png" title="Elaboración de Expedientes Técnicos" />
             <div className="py-8 mx-auto mt-4 space-y-8 max-w-7xl">
                 <div className="sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold">Instrumentos de Gestion Ambiental</h2>
+                    <h2 className="text-4xl font-bold">Elaboración de Expedientes Técnicos</h2>
                     <p className="my-2 text-lg font-light text-zinc-500">
-                        Los <span className="font-bold">Instrumentos de Gestion Ambiental </span>
+                        Los <span className="font-bold">Elaboración de Expedientes Técnicos </span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nihil! Eligendi quasi fugiat laudantium sint, dicta nulla perferendis numquam tenetur debitis modi! Animi quisquam, quaerat nesciunt ullam nulla rerum unde.</p>
                 </div>
-                <ImageContent imgPath="/images/banner1.png" title="Instrumentos de Gestion Ambiental">
+                <ImageContent imgPath="/images/banner1.png" title="Elaboración de Expedientes Técnicos">
                     <div className="grid items-center justify-center w-full h-full grid-cols-1 gap-8 p-6 md:grid-cols-3">
                         {
                             tools.map((tool, index) => (

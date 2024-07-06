@@ -1,11 +1,12 @@
+import Breadcrumb from "@/Components/Breadcrumb"
 import Layout from "@/Layouts/Layout"
 import { Head } from "@inertiajs/react"
 
 export default function Home() {
     return (
         <Layout>
-            <Head title="Inicio" />
-            <h1>Clientes</h1>
+            <Head title="Clientes" />
+            <Breadcrumb imgPath="/images/banner5.png" title="Clientes" />
         </Layout>
     )
 }

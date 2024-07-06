@@ -10,7 +10,11 @@ Route::inertia('/contactenos', 'Contact')->name('contact');
 Route::inertia('/clientes', 'Client')->name('client');
 
 Route::prefix('servicios')->name('services.')->group(function () {
-    Route::inertia('/instrumentos-de-gestion-ambiental', 'Services/InstrumentosDeGestionAmbiental')->name('instrumentos-de-gestion-ambiental');
+    Route::inertia('/instrumentos-de-gestion-ambiental', 'Services/InstrumentosDeGestionAmbiental')->name('service1');
+    Route::inertia('/servicios-de-monitoreos-ambientales', 'Services/ServiciosDeMonitoreosAmbientales')->name('service2');
+    Route::inertia('/servicios-de-monitoreos-ocupacionales', 'Services/ServiciosDeMonitoreosOcupacionales')->name('service3');
+    Route::inertia('/construcción-de-sistemas-de-tratamiento', 'Services/ConstrucciónDeSistemasDeTratamiento')->name('service4');
+    Route::inertia('/elaboración-de-expedientes-tecnicos', 'Services/ElaboraciónDeExpedientesTécnicos')->name('service5');
 });
 
 Route::get('/dashboard', function () {
