@@ -38,15 +38,15 @@ export default function ServiciosDeMonitoreosOcupacionales() {
         <Layout>
             <Head title="Servicios de Monitoreos Ocupacionales" />
             <Breadcrumb imgPath="/images/banner1.png" title="Servicios de Monitoreos Ocupacionales" />
-            <div className="py-8 mx-auto mt-4 space-y-8 max-w-7xl">
-                <div className="sm:px-6 lg:px-8">
+            <div className="py-8 mt-4 space-y-8">
+                <div className="px-4">
                     <h2 className="text-4xl font-bold">Servicios de Monitoreos Ocupacionales</h2>
                     <p className="my-2 text-lg font-light text-zinc-500">
                         Los <span className="font-bold">Servicios de Monitoreos Ocupacionales </span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nihil! Eligendi quasi fugiat laudantium sint, dicta nulla perferendis numquam tenetur debitis modi! Animi quisquam, quaerat nesciunt ullam nulla rerum unde.</p>
                 </div>
                 <ImageContent imgPath="/images/banner1.png" title="Servicios de Monitoreos Ocupacionales">
-                    <div className="flex flex-wrap items-start justify-center w-full h-full px-6 py-6 md:px-12">
+                    <div className="flex flex-wrap items-start justify-center w-full h-full mx-auto py-14 max-w-7xl">
                         {
                             tools.map((tool, index) => (
                                 <div key={index} className="flex flex-col items-center justify-center w-full py-8 text-white md:w-1/2">
