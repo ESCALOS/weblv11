@@ -19,8 +19,7 @@ export default function Home() {
             <Head title="Inicio" />
             <Breadcrumb imgPath="/images/banner1.png" title="Nosotros" />
             <div className="py-8 mx-auto space-y-16 max-w-7xl sm:px-6 lg:px-8">
-
-                <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
+                <div className="grid items-center grid-cols-1 gap-16 px-4 lg:grid-cols-2">
                     <div>
                         <p className="text-slate-500 font-extralight">Presentación Corporativa</p>
                         <h2 className="mt-1 mb-4 text-4xl font-black">¿Quiénes somos?</h2>
@@ -43,7 +42,7 @@ export default function Home() {
                     </div>
                 </div>
                 <hr className="border-2" />
-                <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
+                <div className="grid items-center grid-cols-1 gap-16 px-4 lg:grid-cols-2">
                     <img className="order-2 object-cover h-full rounded-md lg:order-1" src="/images/ab2.png" alt="logo" />
                     <div className="order-1 lg:order-2">
                         <h2 className="mt-1 mb-4 text-4xl font-black">¿Qué hacemos?</h2>

@@ -9,8 +9,8 @@ export default function Layout({ children }: PropsWithChildren) {
             <NavbarWithMegaMenu />
             <main>
                 {children}
+                <CallAction/>
             </main>
-            <CallAction/>
             <Footer />
         </div>
     );
