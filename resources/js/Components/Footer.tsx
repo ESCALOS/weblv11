@@ -38,13 +38,13 @@ export default function Footer() {
                     <h2 className="text-2xl font-bold text-white">Síguenos</h2>
                     <div className="flex items-start gap-4 py-4">
                         <a href="#" target="_blank">
-                        <BsFacebook size={30} color="white" />
+                            <BsFacebook size={30} color="white" />
                         </a>
                         <a href="#" target="_blank">
-                        <BsLinkedin size={30} color="white" />
+                            <BsLinkedin size={30} color="white" />
                         </a>
                         <a href="#" target="_blank">
-                        <BsWhatsapp size={30} color="white" />
+                            <BsWhatsapp size={30} color="white" />
                         </a>
                     </div>
                 </div>
