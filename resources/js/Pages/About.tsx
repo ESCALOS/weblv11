@@ -1,63 +1,78 @@
 import Layout from "@/Layouts/Layout"
-import { Head, Link } from "@inertiajs/react"
-import {
-    CheckCircleIcon,
-  } from "@heroicons/react/24/solid";
+import { Head } from "@inertiajs/react"
 import Breadcrumb from "@/Components/Breadcrumb";
+import LeafIcon from "@/Components/icons/leaf";
 
-export default function Home() {
-    const doingList = [
-        "Instrumentos de Gestión Ambiental",
-        "Monitoreos Ambientales",
-        "Monitoreos Ocupacionales",
-        "Estudios sociales",
-        "Otros servicios adicionales"
+export default function About() {
+    const securities = [
+        {
+            title: "Compromiso y ética profesional.",
+            text: "Asesoramos con honestidad, buscando el criterio objetivo. Basamos la confianza con nuestros clientes y proveedores en la lealtad y la integridad moral."
+        },
+        {
+            title: "Valor humano.",
+            text: "Apostamos por profesionales con valores, responsables, que se implican y participan en el desarrollo de la empresa y en la consecución de sus metas."
+        },
+        {
+            title: "Cuidamos el valor humano, nuestro mejor activo.",
+            text: "Fomentamos el uso racional y sostenible de los recursos naturales, procurando el control y la minimización de consumos, residuos, emisiones y vertidos, e integrando ambientalmente todas nuestras obras para minimizar posibles impactos."
+        }
     ]
     return (
         <Layout>
             <Head title="Inicio" />
             <Breadcrumb imgPath="/images/banner1.png" title="Nosotros" />
-            <div className="py-8 mx-auto space-y-16 max-w-7xl sm:px-6 lg:px-8">
-                <div className="grid items-center grid-cols-1 gap-16 px-4 lg:grid-cols-2">
-                    <div>
-                        <p className="text-slate-500 font-extralight">Presentación Corporativa</p>
-                        <h2 className="mt-1 mb-4 text-4xl font-black">¿Quiénes somos?</h2>
-                        <p className="text-lg text-justify text-zinc-500 lg:pr-8">
-                            <span className="font-bold">SERVICIOS AMBIENTALES J & M S.A.C. </span>
-                            <span className="font-light">
-                                es una empresa identificada con el
-                            </span>
-                            <span className="font-bold"> RUC 20608187619 </span>
-                            <span className="font-light">
-                                que brinda servicios de asesoría y consultoría en temas relacionados a medio ambiente, seguridad y salud ocupacional a nivel nacional, con u equipo técnico consolidado que busca siempre la mejora continua en términos ambientales de sus clientes.
-                            </span>
+            <div className="py-12 space-y-8">
+                <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div className="pb-12">
+                        <h1 className="text-4xl font-bold">¿Quiénes somos?</h1>
+                        <p className="max-w-3xl my-4 text-lg text-justify text-zinc-500">
+                            <b>SERVICIOS AMBIENTALES J & M S.A.C.</b> es una empresa identificada con el <b>RUC 20608187619</b>, que brinda servicios de asesoría y consultoría en temas relacionados a medio ambiente, seguridad y salud ocupacional a nivel nacional, con un equipo técnico consolidado que busca siempre la mejora continua en términos ambientales de sus clientes. <br/>
+                            Estamos convencidos que el cuidado de nuestro planeta depende de las acciones responsables que hagamos como sociedad, por esto nuestros servicios cumplen con la normativa legal vigente para lograr este fin.
                         </p>
-                        <Link href={route('services.service1')} className="inline-block px-6 py-4 my-8 text-xl font-bold text-white transition-opacity bg-blue-800 rounded-full hover:opacity-90">
-                            Leer más
-                        </Link>
                     </div>
-                    <div>
-                    <img className="object-cover h-full rounded-md" src="/images/ab1.png" alt="logo" />
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        <img className="w-full rounded-md" src="/images/banner3.png" alt="b1" />
+                        <img className="w-full rounded-md" src="/images/banner2.png" alt="b2" />
                     </div>
                 </div>
-                <hr className="border-2" />
-                <div className="grid items-center grid-cols-1 gap-16 px-4 lg:grid-cols-2">
-                    <img className="order-2 object-cover h-full rounded-md lg:order-1" src="/images/ab2.png" alt="logo" />
-                    <div className="order-1 lg:order-2">
-                        <h2 className="mt-1 mb-4 text-4xl font-black">¿Qué hacemos?</h2>
-                        <p className="text-lg font-light text-justify text-zinc-500 lg:pr-8">
-                            Nos enorgullece contar con un equipo técnico altamente capacitado y experimentado, capaz de adaptarse a las necesidades expecíficas de cada clientey sector.
-                        </p>
-                        <ul>
-                            {
-                                doingList.map((item, index) => (
-                                    <li key={index} className="mt-2 text-lg font-light text-justify text">
-                                        <CheckCircleIcon strokeWidth={2} className="inline w-6 h-6 mr-4 text-gray-500"/>
-                                        {item}
-                                    </li>
-                                ))
-                            }
-                        </ul>
+                <div className="flex flex-wrap items-center justify-center w-full gap-4 md:gap-16 py-24 mx-auto bg-[#936be80d]">
+                    <div>
+                        <p className="text-sm font-light text-zinc-500">Presentación Corporativa</p>
+                        <h2 className="text-4xl font-bold">Nuestra Misión</h2>
+                    </div>
+                    <p className="max-w-3xl px-6 text-justify text-zinc-500">
+                        Garantizar la eficiencia, responsabilidad y transparencia de nuestra empresa, debido a que conducimos a las empresas a lograr una óptima gestión ambiental, en todas sus actividades, identificando y evaluando todas las variables ambientales. Asimismo, brindamos el servicio de consultoría y asesoría técnica ambiental, seguridad y salud ocupacional a empresas interesadas en contar con una política de prevención y ambientalmente responsable.
+                    </p>
+                </div>
+                <div className="flex flex-wrap items-center justify-center w-full gap-4 md:gap-16 py-24 mx-auto bg-[#936be80d]">
+                    <p className="order-2 max-w-3xl px-6 text-justify text-zinc-500 xl:order-1">
+                        Garantizar la eficiencia, responsabilidad y transparencia de nuestra empresa, debido a que conducimos a las empresas a lograr una óptima gestión ambiental, en todas sus actividades, identificando y evaluando todas las variables ambientales. Asimismo, brindamos el servicio de consultoría y asesoría técnica ambiental, seguridad y salud ocupacional a empresas interesadas en contar con una política de prevención y ambientalmente responsable.
+                    </p>
+                    <div className="order-1 xl:order-2">
+                        <p className="text-sm font-light text-right text-zinc-500">Presentación Corporativa</p>
+                        <h2 className="text-4xl font-bold">Nuestra Visión</h2>
+                    </div>
+                </div>
+                <div className="flex flex-wrap items-center justify-center w-full gap-4 md:gap-16 py-24 mx-auto bg-[#936be80d]">
+                    <div>
+                        <p className="text-sm font-light text-zinc-500">Presentación Corporativa</p>
+                        <h2 className="text-4xl font-bold">Nuestros Valores</h2>
+                    </div>
+                    <div className="max-w-3xl px-6 text-justify divide-y text-zinc-500">
+                        {
+                            securities.map((security,index) =>
+                                <div className="py-4" key={index}>
+                                    <h3 className="font-bold text-zinc-500">
+                                        <LeafIcon color="#71717a" size={20} />
+                                        <span className="pl-2">{security.title}</span>
+                                    </h3>
+                                    <p className="font-light text-justify text-zinc-500">
+                                        {security.text}
+                                    </p>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, usePage } from '@inertiajs/react'
 import {
   Collapse,
   Typography,
@@ -22,7 +23,6 @@ import {
   SunIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-import { Link } from "@inertiajs/react";
 
 const navListMenuItems = [
   {
@@ -55,6 +55,7 @@ const navListMenuItems = [
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const { component } = usePage()
   const renderItems = navListMenuItems.map(
     ({ icon, title, route }, key) => (
       <Link href={route} key={key}>
@@ -92,7 +93,7 @@ function NavListMenu() {
         <MenuHandler>
           <Typography as="div" variant="small" className="font-medium">
             <ListItem
-              className="flex items-center gap-2 py-2 pr-4 text-lg font-medium text-gray-900"
+              className={`flex items-center gap-2 py-2 pr-4 text-lg font-medium text-gray-900 ${component.startsWith('Services') ? 'text-primary-500' : ''}`}
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -126,16 +127,18 @@ function NavListMenu() {
 }
 
 function NavList() {
+  const { component } = usePage()
+
   return (
     <List className="p-0 mt-4 mb-6 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-      <Link href={route('home')}>
+      <Link href={route('home')} >
         <Typography
             as="div"
             variant="small"
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
+            <ListItem className={`flex items-center gap-2 py-2 pr-4 text-lg ${component === 'Home' ? 'text-primary-500 font-bold' : ''}`}>
                 Inicio
             </ListItem>
         </Typography>
@@ -147,7 +150,7 @@ function NavList() {
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
+            <ListItem className={`flex items-center gap-2 py-2 pr-4 text-lg ${component === 'About' ? 'text-primary-500 font-bold' : ''}`}>
                 Nosotros
             </ListItem>
         </Typography>
@@ -160,7 +163,7 @@ function NavList() {
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
+            <ListItem className={`flex items-center gap-2 py-2 pr-4 text-lg ${component === 'Client' ? 'text-primary-500 font-bold' : ''}`}>
                 Clientes
             </ListItem>
         </Typography>
@@ -172,7 +175,7 @@ function NavList() {
             color="blue-gray"
             className="font-medium"
         >
-            <ListItem className="flex items-center gap-2 py-2 pr-4 text-lg">
+            <ListItem className={`flex items-center gap-2 py-2 pr-4 text-lg ${component === 'Contact' ? 'text-primary-500 font-bold' : ''}`}>
                 Contáctanos
             </ListItem>
         </Typography>
@@ -183,7 +186,6 @@ function NavList() {
 
 export default function NavbarWithMegaMenu() {
   const [openNav, setOpenNav] = React.useState(false);
-
   React.useEffect(() => {
     window.addEventListener(
       "resize",
