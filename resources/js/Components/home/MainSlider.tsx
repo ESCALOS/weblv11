@@ -63,7 +63,11 @@ export default function MainSlider() {
                     <img src={`/images/banner${slider.id}.png`} alt="banner1" />
                     <div></div>
                     <p>
-                        <span className='block px-8 pb-16 text-4xl md:text-6xl'>{slider.title}</span>
+                        <span className='block px-8 pb-16 text-4xl md:text-6xl'>
+                            {slider.title.split(' ').slice(0,3).join(' ')}
+                            <br/>
+                            {slider.title.split(' ').slice(3).join(' ')}
+                        </span>
                         <Link href={slider.redirect} className='px-12 py-4 text-lg text-white transition-colors rounded-full bg-primary-500 hover:bg-primary-600'>
                             Conoce más
                             <TriangleRight color='white' size={20} />

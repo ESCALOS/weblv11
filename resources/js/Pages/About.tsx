@@ -22,7 +22,7 @@ export default function About() {
         <Layout>
             <Head title="Inicio" />
             <Breadcrumb imgPath="/images/banner1.png" title="Nosotros" />
-            <div className="py-12 space-y-8">
+            <div className="py-16 space-y-8">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="pb-12">
                         <h1 className="text-4xl font-bold">¿Quiénes somos?</h1>

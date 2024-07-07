@@ -1,5 +1,5 @@
 :root {
-    --swiper-theme-color: #4267a9;
+    --swiper-theme-color: #fff;
 }
 .swiper-slide {
     text-align: center;
@@ -20,7 +20,7 @@
 .swiper-slide div {
     position: absolute;
     inset: 0;
-    background-color: black;
+    background-color: #4267a9;
     opacity: 0.7;
     mix-blend-mode: multiply;
 }

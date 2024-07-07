@@ -17,8 +17,8 @@ export default function ServiciosDeMonitoreosAmbientales() {
         <Layout>
             <Head title="Servicios de Monitoreos Ambientales" />
             <Breadcrumb imgPath="/images/banner1.png" title="Servicios de Monitoreos Ambientales" />
-            <div className="py-8 mt-4 space-y-8">
-                <div className="px-4">
+            <div className="py-16 mt-4 space-y-24">
+                <div className="px-4 mx-auto text-center max-w-7xl">
                     <h2 className="text-4xl font-bold">Servicios de Monitoreos Ambientales</h2>
                     <p className="my-2 text-lg font-light text-zinc-500">
                         Los <span className="font-bold">Servicios de Monitoreos Ambientales </span>
