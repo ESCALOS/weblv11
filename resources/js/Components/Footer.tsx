@@ -49,6 +49,11 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="py-6 bg-primary-700">
+                <p className="px-4 text-xl font-bold text-center text-white">
+                ©2024. Servicios Ambientales J & M | RUC: 20608187619
+                </p>
+            </div>
         </footer>
     )
 }
