@@ -24,30 +24,41 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
 
+import {
+    BsBricks,
+    BsTools,
+    BsThermometerHalf,
+    BsFilesAlt,
+} from "react-icons/bs";
+
+import {
+    FaSeedling
+} from "react-icons/fa";
+
 const navListMenuItems = [
   {
     title: "Instrumentos de Gestión Ambiental",
-    icon: SquaresPlusIcon,
+    icon: <BsTools />,
     route: route('services.service1')
   },
   {
     title: "Servicios de Monitoreos Ambientales",
-    icon: UserGroupIcon,
+    icon: <FaSeedling />,
     route: route('services.service2')
   },
   {
     title: "Servicios de Monitoreos Ocupacionales",
-    icon: Bars4Icon,
+    icon: <BsThermometerHalf />,
     route: route('services.service3')
   },
   {
     title: "Construcción de Sistemas de Tratamiento",
-    icon: SunIcon,
+    icon: <BsBricks />,
     route: route('services.service4')
   },
   {
     title: "Elaboración de Expedientes Técnicos",
-    icon: GlobeAmericasIcon,
+    icon: <BsFilesAlt />,
     route: route('services.service5')
   }
 ];
@@ -62,10 +73,7 @@ function NavListMenu() {
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
             {" "}
-            {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 text-gray-900 w-6",
-            })}
+            {icon}
           </div>
           <div>
             <Typography
