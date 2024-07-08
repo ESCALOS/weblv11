@@ -21,3 +21,7 @@
         transform: rotate(360deg);
     }
 }
+
+.nav-item {
+    @apply py-2 px-4 hover:bg-gray-100 hover:text-primary-500 rounded-md w-full font-bold
+}

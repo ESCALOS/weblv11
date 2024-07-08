@@ -1,8 +1,5 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -13,7 +10,7 @@ import '/resources/css/mainSlider.css';
 
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Link } from '@inertiajs/react';
-import TriangleRight from '../icons/triangleRight';
+import TriangleRight from '@/Components/icons/triangleRight';
 
 export default function MainSlider() {
     const sliders = [

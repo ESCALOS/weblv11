@@ -6,7 +6,7 @@ import {
     CheckCircleIcon,
   } from "@heroicons/react/24/solid";
 
-const MainSlider = lazy(() => import("@/Components/home/MainSlider"))
+const MainSlider = lazy(() => import("@/Components/MainSlider"))
 
 export default function Home() {
     const doingList = [

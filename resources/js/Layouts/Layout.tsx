@@ -1,6 +1,6 @@
 import CallAction from '@/Components/CallAction';
 import Footer from '@/Components/Footer';
-import NavbarWithMegaMenu from '@/Components/material/Nabvar';
+import NavbarWithMegaMenu from '@/Components/Nabvar';
 import { PropsWithChildren } from 'react';
 
 export default function Layout({ children }: PropsWithChildren) {
